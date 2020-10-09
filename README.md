@@ -2,8 +2,19 @@
 
 Dependencies
 * Flask
+* scikit-learn
+* numpy
 
 run python app.py
 
+* TODO
 
-* working on multiple choice ,sending data to server
+* sending data to server (DONE)
+* real questions and real ansers
+* Student answers sample data
+* building the model
+* perdiction on the table
+* beautful interface
+
+* pitch ppt
+
