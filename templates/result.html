@@ -13,12 +13,28 @@
   </tr>
 
   {% for row in table %}
-    
+  {% if row[1] == 0 %} 
     <tr>
-     <td>{{row[0]}}</td>
-     <td>{{row[2]}}</td>
-     <td>{{row[1]}}</td>
+     <td bgcolor="red">{{row[0]}}</td>
+     <td bgcolor="red">{{row[2]}}</td>
+     <td bgcolor="red">{{row[1]}}</td>
     </tr>
+
+  {% elif row[1] == 1 %} 
+    <tr>
+     <td bgcolor="blue">{{row[0]}}</td>
+     <td bgcolor="blue">{{row[2]}}</td>
+     <td bgcolor="blue">{{row[1]}}</td>
+    </tr>
+
+  {% else %} 
+    <tr>
+     <td bgcolor="green">{{row[0]}}</td>
+     <td bgcolor="green">{{row[2]}}</td>
+     <td bgcolor="green">{{row[1]}}</td>
+    </tr>
+  {% endif %}
+
   {% endfor %}
 
 
