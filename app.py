@@ -10,7 +10,7 @@ def unsupervised_ml(score):
 
 
     X = np.load("stud_data.npy")
-    X = np.append(3,X)[:,np.newaxis]
+    X = np.append(score,X)[:,np.newaxis]
 
     kmeans = KMeans(n_clusters=3, random_state=0).fit(X)
     labels = np.array(kmeans.labels_)[:,np.newaxis]
@@ -52,7 +52,7 @@ def index2():
     student_score = grade(s_ans,answer)
     table,X = unsupervised_ml(student_score)
 
-    print(table[0:3])
+    print(student_score)
 
     stud_id = table[:,0]
     cl = table[:,1]
