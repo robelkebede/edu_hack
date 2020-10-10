@@ -1,7 +1,7 @@
 
-#Hackathon Project
+# Hackathon Project
 
-##Dependencies
+## Dependencies
 * Flask
 * scikit-learn
 * numpy
