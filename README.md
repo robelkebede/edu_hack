@@ -13,7 +13,7 @@ run python app.py
 * sending data to server (DONE)
 * real questions and real ansers (DONE)
 * Student answers sample data and score (DONE)
-* building the model
+* building the model(DONE)
 * perdiction on the table
 * beautful interface
 
