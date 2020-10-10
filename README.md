@@ -14,7 +14,7 @@ run python app.py
 * real questions and real ansers (DONE)
 * Student answers sample data and score (DONE)
 * building the model(DONE)
-* perdiction on the table
+* perdiction on the table (DONE)
 * beautful interface
 
 * pitch ppt

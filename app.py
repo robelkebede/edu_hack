@@ -19,7 +19,7 @@ def unsupervised_ml(score):
     print(labels.shape)
     print(stud_id.shape)
     table = np.concatenate([stud_id,labels],axis=1)
-    return table
+    return table,X
 
 
 def grade(s_ans,ans):
@@ -50,12 +50,14 @@ def index2():
     "Thermosphere"," Ernst Haeckel","b"]
 
     student_score = grade(s_ans,answer)
-    table = unsupervised_ml(student_score)
+    table,X = unsupervised_ml(student_score)
 
     print(table[0:3])
 
     stud_id = table[:,0]
-    score = table[:,1]
+    cl = table[:,1]
+
+    table = np.concatenate([table,X],axis=1)
 
     #return render_template("result.html",stud_id=stud_id,score=score)
     return render_template("result.html",table=table)
