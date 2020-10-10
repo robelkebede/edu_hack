@@ -1,8 +1,25 @@
 
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,jsonify
+from sklearn.cluster import KMeans
+import numpy as np
 
 
 app = Flask(__name__)
+
+def unsupervised_ml(score):
+
+
+    X = np.load("stud_data.npy")
+    X = np.append(3,X)[:,np.newaxis]
+
+    kmeans = KMeans(n_clusters=3, random_state=0).fit(X)
+    labels = np.array(kmeans.labels_)[:,np.newaxis]
+    stud_id = np.array([i for i in range(len(labels))])[:,np.newaxis]
+
+    print(labels.shape)
+    print(stud_id.shape)
+    table = np.concatenate([stud_id,labels],axis=1)
+    return table
 
 
 def grade(s_ans,ans):
@@ -33,10 +50,15 @@ def index2():
     "Thermosphere"," Ernst Haeckel","b"]
 
     student_score = grade(s_ans,answer)
+    table = unsupervised_ml(student_score)
 
-    print(student_score)
+    print(table[0:3])
 
-    return render_template("result.html")
+    stud_id = table[:,0]
+    score = table[:,1]
+
+    #return render_template("result.html",stud_id=stud_id,score=score)
+    return render_template("result.html",table=table)
 
 
 if __name__ == "__main__":

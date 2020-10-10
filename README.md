@@ -1,13 +1,14 @@
 
+#Hackathon Project
 
-Dependencies
+##Dependencies
 * Flask
 * scikit-learn
 * numpy
 
 run python app.py
 
-* TODO
+## TODO
 
 * sending data to server (DONE)
 * real questions and real ansers (DONE)
