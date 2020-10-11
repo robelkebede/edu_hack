@@ -4,10 +4,9 @@ from sklearn.cluster import KMeans
 import numpy as np
 
 
-app = Flask(__name__)
+app = Flask(__name__,static_url_path="/static")
 
 def unsupervised_ml(score):
-
 
     X = np.load("stud_data.npy")
     X = np.append(score,X)[:,np.newaxis]
