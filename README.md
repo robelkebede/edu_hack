@@ -19,7 +19,7 @@ run python app.py
 
 * pitch ppt
 
-## Sick web-design skill
+## Sick web-design skilz
 ![Alt text](./updated.png?raw=true "img")
 
 
